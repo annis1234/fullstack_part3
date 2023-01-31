@@ -6,5 +6,5 @@ build/
 .env
 .eslintignore
 .eslintrc.js
-.fly
+.fly/
 .DS_store
