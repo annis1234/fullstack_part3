@@ -27,7 +27,6 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(express.static('build'))
 
-let persons = []
 
 app.get('/info', (request, response) => {
   Person.find({}).then(persons => {
@@ -72,7 +71,7 @@ app.post('/api/persons', (request, response, next) => {
     })
   }
 
-  if(persons.find((person) => person.name.toLowerCase() === body.name.toLowerCase())){
+  if(Person.findOne((person) => person.name.toLowerCase() === body.name.toLowerCase())){
     return response.status(400).json({
       error: 'name must be unique'
     })
