@@ -4,7 +4,5 @@ Dockerfile
 .dockerignore
 build/
 .env
-.eslintignore
-.eslintrc.js
 .fly/
 .DS_store
